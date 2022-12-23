@@ -1,19 +1,16 @@
 import {
   Box,
-  BoxProps,
-  Button
 } from '@mui/material';
 import { styled } from '@mui/system';
 import {
   ButtonRB,
-  ButtonRBProps
 } from '../button/ButtonRB';
 
 export const FormButtonRow = ({
   submitButtonText = 'Submit',
   resetButtonText = 'Cancel',
   onCancel
-}: FormButtonRow) => {
+}: FormButtonRowProps) => {
 
   const isShowButtons = [
     submitButtonText,
@@ -73,7 +70,7 @@ const ResetButton = ({
 }
 
 const ButtonRowStyled = styled(Box)(({
-
+  theme
 }) => ({
   display: 'flex',
   justifyContent: 'flex-end',
@@ -81,7 +78,7 @@ const ButtonRowStyled = styled(Box)(({
   gap: '24px'
 }));
 
-export interface FormButtonRow {
+export interface FormButtonRowProps {
   /**
    * Displays submit button with given text
    * Submits form on click

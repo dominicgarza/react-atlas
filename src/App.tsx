@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import {
   Person,
@@ -44,8 +43,7 @@ function App() {
   const {
     isUserLoggedIn,
     logOut,
-    loginWithEmail,
-    realm
+    loginWithEmail
   } = useRealm(onLogin, onLogout);
 
   const navigationActions: any = getNavigationActions({

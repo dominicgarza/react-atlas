@@ -109,18 +109,20 @@ const DefaultDescription = ({
 
       &nbsp;&nbsp;
 
-      <a
-        href='#'
+      <div
+        style={{
+          
+        }}
         onClick={clickHandler}>
 
         Click Here
 
-      </a>
+      </div>
     </div>
   );
 }
 
-export const specialCharacterRegex = /[ `!@#$%^&*()_+\-=\]{};':"\\|,.<>?~\/]/g;
+export const specialCharacterRegex = /[ `!@#$%^&*()_+\-=\]{};':"\\|,.<>?~/]/g;
 export const numberRegex = /[0-9]/g;
 export const matchPasswordValidate = ({
   p = '',

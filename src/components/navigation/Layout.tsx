@@ -176,6 +176,10 @@ export interface NavigationAction {
    */
   ariaLabel?: string;
   /**
+   * After navigation action is clicked, will run this function
+   */
+  onClick?: Function
+  /**
    * MUI Icon to display
    */
   icon?: React.ReactElement | null;
