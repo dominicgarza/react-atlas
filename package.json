@@ -1,7 +1,6 @@
 {
-  "name": "react-base",
+  "name": "react-atlas",
   "version": "0.1.0",
-  "homepage": "https://mccollumn.github.io/react-base/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
