@@ -2,7 +2,7 @@ import {TextField, TextFieldProps} from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchInput = ({
+export const SearchInput = ({
   ...props
 }: TextFieldProps) => {
     return (
