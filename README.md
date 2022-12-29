@@ -11,3 +11,14 @@ Project forked from [https://github.com/mccollumn/react-base](react-base)
 * Create a user with Email/Password in MongoDB Atlas
 * Start this App
 * Login on the Login page
+
+# E2E Tests
+E2E tests are run with cypress
+
+* Install cypress globally
+```
+npm install cypress -g
+```
+
+## E2E Pipeline Testing
+E2E tests are run in github actions
