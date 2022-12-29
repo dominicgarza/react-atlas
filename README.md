@@ -15,9 +15,9 @@ Project forked from [https://github.com/mccollumn/react-base](react-base)
 # E2E Tests
 E2E tests are run with cypress
 
-* Install cypress globally
+* Run tests locally
 ```
-npm install cypress -g
+npm run e2e
 ```
 
 ## E2E Pipeline Testing
