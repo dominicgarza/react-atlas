@@ -1,10 +1,9 @@
 describe('Login', () => {
+
   it('Should not login with invalid email', () => {
 
-    cy.log(Cypress.config());
-
     cy.visit('/');
-    
+
     // Open Login Navigation Item
     cy.get('[aria-label="Login"]').click();
 
@@ -22,4 +21,23 @@ describe('Login', () => {
       .should('include.text', 'valid email');
 
   });
+
+  it('Should login successfully', () => {
+
+    cy.login();
+
+    cy.visit('/');
+
+    // Log Out
+    cy.get('[aria-label="Avatar"]').click();
+    cy.get('.popover-body')
+      .contains('Logout')
+      .click();
+
+    // Ensure we are logged out 
+    cy.get('[aria-label="Login"]')
+      .should('exist');
+
+  });
+
 });

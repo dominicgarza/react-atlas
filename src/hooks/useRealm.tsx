@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Realm from 'realm-web';
-const APP_ID = process.env.REACT_APP_TRADER_APP_ID || 'unknown_app_id';
-const realm = new Realm.App({id: APP_ID});
+const APP_ID = process.env.REACT_APP_ATLAS_APP_ID || 'unknown_app_id';
+const realm = new Realm.App({ id: APP_ID });
 
 /**
  * Handle Realm Authorization

@@ -10,8 +10,35 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+
+// Add Login to session
+Cypress.Commands.add('login', (email, password) => {
+
+  cy.session([email, password], () => {
+    const emailVal = email || Cypress.env('LOGIN_EMAIL');
+    const passwordVal = password || Cypress.env('LOGIN_PASSWORD');
+
+    cy.visit('/');
+
+    // Open Login Navigation Item
+    cy.get('[aria-label="Login"]').click();
+
+    // Fill Email
+    cy.get('input[name="email"]').type(emailVal);
+
+    // Fill Password
+    cy.get('input[name="password"]').type(passwordVal);
+
+    // Click Submit
+    cy.get('button[type="submit"]').click();
+
+    // Ensure we are logged in
+    cy.get('[aria-label="Settings"]')
+      .should('exist');
+
+  });
+
+})
 //
 //
 // -- This is a child command --
