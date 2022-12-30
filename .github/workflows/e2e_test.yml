@@ -13,7 +13,6 @@ jobs:
         with:
           start: npm run start
           wait-on: http://localhost:3000
-          env: configFile=ci
         env:
           REACT_APP_ATLAS_APP_ID: ${{ secrets.REACT_APP_ATLAS_APP_ID }}
           CYPRESS_LOGIN_EMAIL: ${{ secrets.CYPRESS_LOGIN_EMAIL }}
