@@ -5,6 +5,7 @@ import {
 import { TopNavBar } from './TopNavBar'
 import { LeftNavDrawer } from './LeftNavDrawer'
 import { filterNavigationActions } from './navigation.util';
+import { styled } from '@mui/material/styles';
 
 export const Layout = ({
   label,
@@ -36,12 +37,14 @@ export const Layout = ({
     isAuthorized
   );
 
-  let baseClassNames = ['base-application'];
+  const baseClassNames = ['base-application'];
   baseClassNames.push(open ? 'expanded' : 'contracted');
+  baseClassNames.push(isAuthorized ? 'authorized' : 'unauthorized');
 
   return (
-    <Box
+    <LayoutBaseStyled
       className={baseClassNames.join(' ')}
+      data-testid={isAuthorized ? 'authorized' : 'unauthorized'}
       sx={{
         display: "flex",
         flexGrow: 1
@@ -88,7 +91,7 @@ export const Layout = ({
         {children}
 
       </Box>
-    </Box>
+    </LayoutBaseStyled>
   );
 };
 
@@ -122,6 +125,22 @@ const getNavigationActions = (
   }
 
 }
+
+const LayoutBaseStyled = styled(Box)(({
+  theme
+}: any) => {
+
+  return {
+    display: "flex",
+    flexGrow: 1,
+
+    '&.unauthorized .base-page-container': {
+      marginLeft: 0
+    }
+
+  }
+
+});
 
 interface LayoutProps {
   /**

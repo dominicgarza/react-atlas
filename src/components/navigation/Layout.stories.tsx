@@ -43,6 +43,7 @@ export const LoggedOut = Template.bind({});
 LoggedOut.args = {
   label: "Logged Out",
   isAuthorized: false,
+  children: (<div>Example of logged out navigation</div>),
 };
 
 export const LoggedIn = () => {

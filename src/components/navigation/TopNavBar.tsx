@@ -48,7 +48,11 @@ export const TopNavBar = ({
               height: 48,
             }}
           >
-            <Menu />
+            <Menu
+              sx={{
+                marginBottom: '4px'
+              }}
+            />
           </IconButton>
 
           <Typography
