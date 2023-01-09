@@ -20,6 +20,7 @@ import {
 import {
   ModalRB
 } from '../modal/ModalRB'
+import _ from 'lodash';
 
 /**
  * Standard Navigation Button/Icon
@@ -93,7 +94,7 @@ const NavAction = ({
   onClick
 }: any) => {
 
-  const selected = action === selectedNav;
+  const selected = _.isEqual(action, selectedNav);
 
   // Left Drawer Navigation Item
   if(action.position === 'left') {
